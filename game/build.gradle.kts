@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 plugins {
     id("org.springframework.boot") version "2.6.4"
@@ -16,6 +17,7 @@ repositories {
 }
 
 dependencies {
+    implementation(platform(SpringBootPlugin.BOM_COORDINATES))
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
